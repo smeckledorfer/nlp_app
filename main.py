@@ -1,15 +1,11 @@
 import streamlit as st
 
-from freebible import read_web
-from freebible import bibles
-web = read_web()
 
 import string
 
-with open("C:\\Users\\Matthew\\streamlit_apps\\gatsby.txt",'r',encoding = "utf-8") as file:
-    text = file.readlines()
 
-text = " ".join(text)
+
+
 
 
 st.title("Welcome, beautiful person!")
@@ -22,13 +18,7 @@ st.write("")
 name_sentence = "Hello, " + name + "! What story would you like to be in?"
 st.subheader(name_sentence)
 
-#book  = st.multiselect('Choose your book...', ['Gen', 'Exo', 'Lev', 'Num', 'Deu'])
-book = st.selectbox('Choose your book...', ['Gen', 'Exo', 'Lev','Num', 'Deu'])
-#book = book[0]
-
-chapter  = st.number_input('Pick a chapter...', 0, 10)
-
-verse  = st.number_input('Pick a verse...', 0, 10)
+text = st.text_input('Input Text')
 #"""
 import stanza as sz
 sz.download('en')
